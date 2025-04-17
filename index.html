@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tip Calculator (Tax + Tip)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <main>
+      <h1>💰 Tip Calculator</h1>
+      <form id="tipForm">
+
+        <!-- Extra Credit: Currency selection -->
+        <h4>Currency Conversion:</h2>
+        <h4>$1 USD = €0.95 EUR | $1 USD = ₹85 INR </h4>
+
+        <!-- 1) Bill Total -->
+        <div class="form-group">
+          <label for="billTotal">Bill Total ($):</label>
+          <input type="text" id="billTotal" placeholder="Enter bill amount" />
+        </div>
+
+        <!-- 2) Total with 11% Tax -->
+        <div class="form-group">
+          <label for="totalWithTax">🧾 Total with 11% Tax ($):</label>
+          <input type="text" id="totalWithTax" disabled />
+        </div>
+
+        
+
+        <!-- 3) Currency Selection -->
+        <div class="form-group">
+          <label for="currencySelect">Select Currency:</label>
+          <select id="currencySelect">
+            <option value="">--Select--</option>
+            <option value="USD">USD ($)</option>
+            <option value="INR">INR (₹)</option>
+            <option value="EUR">EUR (€)</option>
+          </select>
+        </div>
+
+        <!-- 4) Tip Slider & Percentage -->
+        <div class="form-group">
+          <label for="tipSlider">Tip % (on Bill+Tax):</label>
+          <input type="range" id="tipSlider" min="0" max="100" value="15" />
+          <input type="text" id="tipPercentage" disabled />
+        </div>
+
+        <!-- 5) Tip Amount -->
+        <div class="form-group">
+          <label for="tipAmount">💡Tip Amount:</label>
+          <input type="text" id="tipAmount" disabled />
+        </div>
+
+        <!-- 6) Converted Tip Amount -->
+        <div class="form-group">
+          <label for="convertedTipAmount">Converted Tip Amount:</label>
+          <input type="text" id="convertedTipAmount" disabled />
+        </div>
+
+        <!-- 7) Total with Tip & Tax -->
+        <div class="form-group">
+          <label for="totalWithTipTax">💵 Total with Tip & Tax:</label>
+          <input type="text" id="totalWithTipTax" disabled />
+        </div>
+
+        <!-- 8) Converted Total with Tip & Tax -->
+        <div class="form-group">
+          <label for="convertedTotalWithTipTax">🧮 Converted Total with Tip & Tax:</label>
+          <input type="text" id="convertedTotalWithTipTax" disabled />
+        </div>
+
+        <p id="errorMsg" class="error"></p>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
